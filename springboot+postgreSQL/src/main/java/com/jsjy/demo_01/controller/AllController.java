@@ -2,9 +2,11 @@ package com.jsjy.demo_01.controller;
 
 import com.jsjy.demo_01.dao.person;
 import com.jsjy.demo_01.service.AllService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import sun.rmi.runtime.Log;
 
 import java.util.List;
 
@@ -13,9 +15,12 @@ public class AllController {
     @Autowired
     private AllService service;
 
+    private static Logger log = Logger.getLogger(AllController.class);
+
     @RequestMapping(value = "/test")
     public List<person> getAll(){
         List<person> getall = service.getall();
+        log.info("日志添加成功");
         System.out.println("获取数据"+getall);
         return getall;
     }
