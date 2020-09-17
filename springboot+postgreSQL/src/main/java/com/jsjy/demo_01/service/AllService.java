@@ -27,4 +27,8 @@ public class AllService {
     public int del(int id){
         return mapper.del(id);
     }
+
+    public List<person> getallbyid(int id){
+        return mapper.getallbyid(id);
+    }
 }

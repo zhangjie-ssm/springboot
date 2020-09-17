@@ -20,6 +20,13 @@ public class AllController {
         return getall;
     }
 
+    @RequestMapping(value = "/getallbyid")
+    public List<person> getallbyid(int id){
+        List<person> getallbyid = service.getallbyid(id);
+        System.out.println("根据id查询"+getallbyid);
+        return getallbyid;
+    }
+
     @RequestMapping(value = "/add")
     public int addPerson(person p){
         int i = service.addPerson(p);
