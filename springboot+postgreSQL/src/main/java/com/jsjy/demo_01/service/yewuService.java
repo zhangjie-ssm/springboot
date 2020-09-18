@@ -1,7 +1,9 @@
 package com.jsjy.demo_01.service;
 
+import com.jsjy.demo_01.controller.yewuController;
 import com.jsjy.demo_01.mapper.AllPerson;
 import com.jsjy.demo_01.mapper.yewuMapper;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,9 @@ import static java.awt.SystemColor.info;
 
 @Service
 public class yewuService {
+
+    private static Logger log = Logger.getLogger(yewuService.class);
+
     @Autowired
     private yewuMapper mapper;
 
@@ -22,6 +27,7 @@ public class yewuService {
     3、拼接到对应字段
      */
     public Map<String ,Object> getInfo(){
+        log.info("进入service层");
         List<Map<String, Object>> info = mapper.getInfo();
         System.out.println("从数据获取到的数据"+info);
         int i = hqgx(info);
