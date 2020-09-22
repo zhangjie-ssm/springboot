@@ -29,6 +29,9 @@ public class person {
         this.age = age;
     }
 
+    public person() {
+    }
+
     public person(int id, String name, int age) {
         this.id = id;
         this.name = name;

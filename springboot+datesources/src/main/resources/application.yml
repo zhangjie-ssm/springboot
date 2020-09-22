@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    test1:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://127.0.0.1:5432/test_01?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: postgres
+      password: 123456
+
+    test2:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://127.0.0.1:5432/test_02?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: postgres
+      password: 123456
+
+    test3:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://127.0.0.1:5432/test_03?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: postgres
+      password: 123456
+
+
+
